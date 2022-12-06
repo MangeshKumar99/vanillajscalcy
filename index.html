@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" /> -->
+    <link href="https://fonts.googleapis.com/css?family=League Spartan" rel="stylesheet" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="./calc.js" defer></script>
+    <title>Calculator</title></head>
+
+<body id="body" class="bg-[#3A4764]">
+    <div class="flex justify-center items-center min-h-screen">
+        <div class="calc__body flex flex-col gap-4 w-[25rem]">
+            <div class="first__row flex justify-between items-center md:px-0 px-4">
+                <div id="logo" class="text-white font-bold text-xl">calc</div>
+                <div class="flex gap-3 items-center">
+                    <div id="theme" class="text-white font-bold text-xs">THEME</div>
+                    <div class="flex flex-col">
+                        <div id="number" class="text-xs text-white flex justify-evenly">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                        </div>
+                        <div id="toggle" onclick="onToggle(event)" class="bg-[#202034] w-12 h-5 rounded-xl flex items-center cursor-pointer">
+                            <span class="h-[1rem] w-[1rem] rounded-2xl bg-[#CA5502]" id="theme1"></span>
+                            <span class="text-[#202034]" id="theme2">2</span>
+                            <span class="text-[#202034]" id="theme3">3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="calcyScreen" class="second__row h-24 bg-[#202034] rounded-md md:mx-0 mx-4 flex justify-end text-4xl font-bold text-white p-2">
+
+            </div>
+            <div id="keypad" onclick="onKeyPress(event)" class="third__row flex justify-center flex-wrap gap-4 p-3 rounded-md bg-[#232C43] h-[22rem] md:mx-0 mx-4">
+                <div id="key7" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">7</div>
+                <div id="key8" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">8</div>
+                <div id="key9" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">9</div>
+                <div id="del" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#6B789E] text-white font-bold text-2xl cursor-pointer">DEL</div>
+                <div id="key4" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">4</div>
+                <div id="key5" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">5</div>
+                <div id="key6" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">6</div>
+                <div id="keyplus" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">+</div>
+                <div id="key1" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">1</div>
+                <div id="key2" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">2</div>
+                <div id="key3" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">3</div>
+                <div id="keyminus" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">-</div>
+                <div id="keydot" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">.</div>
+                <div id="key0" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">0</div>
+                <div id="keydivide" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">/</div>
+                <div id="keymultiply" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">x</div>
+                <div id="reset" class="md:w-44 sm:w-36 w-[6.4rem] flex justify-center items-center h-12 rounded-md bg-[#6B789E] text-white font-bold text-2xl cursor-pointer">RESET</div>
+                <div id="equal" class=" md:w-44 sm:w-36 w-[6.4rem] flex justify-center items-center h-12 rounded-md bg-[#CA5502] text-white font-bold text-2xl cursor-pointer">=</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
