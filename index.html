@@ -37,25 +37,25 @@
             <div id="calcyScreen" class="second__row h-24 bg-[#202034] rounded-md md:mx-0 mx-4 flex justify-end text-4xl font-bold text-white p-2">
 
             </div>
-            <div id="keypad" onclick="onKeyPress(event)" class="third__row flex justify-center flex-wrap gap-4 p-3 rounded-md bg-[#232C43] h-[22rem] md:mx-0 mx-4">
-                <div id="key7" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">7</div>
-                <div id="key8" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">8</div>
-                <div id="key9" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">9</div>
-                <div id="del" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#6B789E] text-white font-bold text-2xl cursor-pointer">DEL</div>
-                <div id="key4" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">4</div>
-                <div id="key5" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">5</div>
-                <div id="key6" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">6</div>
-                <div id="keyplus" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">+</div>
-                <div id="key1" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">1</div>
-                <div id="key2" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">2</div>
-                <div id="key3" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">3</div>
-                <div id="keyminus" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">-</div>
-                <div id="keydot" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">.</div>
-                <div id="key0" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">0</div>
-                <div id="keydivide" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">/</div>
-                <div id="keymultiply" class="md:w-20 sm:w-16 w-[2.7rem] flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">x</div>
-                <div id="reset" class="md:w-44 sm:w-36 w-[6.4rem] flex justify-center items-center h-12 rounded-md bg-[#6B789E] text-white font-bold text-2xl cursor-pointer">RESET</div>
-                <div id="equal" class=" md:w-44 sm:w-36 w-[6.4rem] flex justify-center items-center h-12 rounded-md bg-[#CA5502] text-white font-bold text-2xl cursor-pointer">=</div>
+            <div id="keypad" onclick="onKeyPress(event)" class="third__row grid grid-cols-4 items-center gap-x-4 gap-y-2 justify-center p-3 rounded-md bg-[#232C43] h-[22rem] md:mx-0 mx-4">
+                <div id="key7" class="flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">7</div>
+                <div id="key8" class="flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">8</div>
+                <div id="key9" class="flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">9</div>
+                <div id="del" class="flex justify-center items-center h-12 rounded-md bg-[#6B789E] text-white font-bold text-2xl cursor-pointer">DEL</div>
+                <div id="key4" class="flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">4</div>
+                <div id="key5" class="flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">5</div>
+                <div id="key6" class="flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">6</div>
+                <div id="keyplus" class="flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">+</div>
+                <div id="key1" class="flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">1</div>
+                <div id="key2" class="flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">2</div>
+                <div id="key3" class="flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">3</div>
+                <div id="keyminus" class="flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">-</div>
+                <div id="keydot" class="flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">.</div>
+                <div id="key0" class="flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">0</div>
+                <div id="keydivide" class="flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">/</div>
+                <div id="keymultiply" class="flex justify-center items-center h-12 rounded-md bg-[#EAE3DC] text-[#3B414E] font-bold text-2xl cursor-pointer">x</div>
+                <div id="reset" class=" col-span-2 flex justify-center items-center h-12 rounded-md bg-[#6B789E] text-white font-bold text-2xl cursor-pointer">RESET</div>
+                <div id="equal" class="col-span-2 flex justify-center items-center h-12 rounded-md bg-[#CA5502] text-white font-bold text-2xl cursor-pointer">=</div>
             </div>
         </div>
     </div>
